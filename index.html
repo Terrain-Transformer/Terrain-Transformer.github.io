@@ -67,55 +67,58 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Visual Manipulation with Legs</h1>
+          <h1 class="title is-1 publication-title">Sim-to-Real Transfer for Quadrupedal Locomotion via Terrain Transformer</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://xialin-he.github.io/">Xialin He</a><sup>1,2*</sup>,</span>
+              Hang Lai<sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://yuanchengjing.com">Chengjing Yuan</a><sup>2*</sup>,</span>
+              <a href="https://wnzhang.net/">Weinan Zhang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://wenxuan-zhou.github.io/">Wenxuan Zhou</a><sup>3</sup>,
+              <a href="https://xialin-he.github.io/">Xialin He</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://rchalyang.github.io/">Ruihan Yang</a><sup>2</sup>,
+              Chen Yu<sup>2,3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://davheld.github.io/">David Held</a><sup>3</sup>,
+              Zheng Tian<sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="https://xiaolonw.github.io/">Xiaolong Wang</a><sup>2</sup>,
+              <a href="https://apex.sjtu.edu.cn/members/yyu">Yong Yu</a><sup>1</sup>,
             </span>
-            <!-- <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span> -->
+            <span class="author-block">
+              <a href="http://www0.cs.ucl.ac.uk/staff/jun.wang/">Jun Wang</a><sup>2,5</sup>
+            </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span>
-            <span class="author-block"><sup>2</sup>UC San Diego,</span>
-            <span class="author-block"><sup>3</sup>CMU</span>
+            <span class="author-block"><sup>1</sup>Dept. of Computer Sci. and Eng., Shanghai Jiao Tong University, China,</span>
+            <span class="author-block"><sup>2</sup>Digital Brain Lab, Shanghai, China,</span>
+            <span class="author-block"><sup>3</sup>School of Info. Sci. and Tech., ShanghaiTech University, China</span>
+            <span class="author-block"><sup>4</sup>School of Creativity and Art, ShanghaiTech University, China</span>
+            <span class="author-block"><sup>5</sup>Centre for Artificial Intelligence, University College London, UK</span>
+            <!-- <span class="author-block"><sup>3</sup>School of Info. Sci. and Tech., ShanghaiTech University, China</span> -->
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="hacleg.github.io"
+                <a href="https://arxiv.org/abs/2212.07740"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv(Coming soon)</span>
+                  <span>arXiv</span>
                 </a>
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="hacleg.github.io"
+                <a href="https://www.dropbox.com/s/hima06k5i4k0mty/TERT.zip?dl=0"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code(Coming Soon)</span>
+                  <span>Code</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -211,7 +214,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            &nbsp &nbsp Animals have the ability to use their arms and legs for both locomotion and manipulation. We envision quadruped robots to have the same versatility. This work presents a system that empowers a quadruped robot to perform object interactions with its legs, drawing inspiration from non-prehensile manipulation techniques. The proposed system, Hybrid Actor Critic Maps for Leg Manipulation (HACLeg), has two main components: a manipulation module and a locomotion module. The manipulation module decides how the leg should interact with the object, trained with reinforcement learning (RL) with point cloud observations and object-centric actions using hybrid actor critic maps. The locomotion module controls the leg movements and body pose adjustments, implemented based on impedance control and Model Predictive Control (MPC). Besides manipulating objects with a single leg, the proposed system can also select from left or right legs based on the critic maps and move the object to distant goals through robot base adjustment. In the experiments, we evaluate the proposed system with the object pose alignment tasks both in simulation and in the real world, demonstrating object manipulation skills with legs beyond previous work. 
+            &nbsp &nbsp Deep reinforcement learning has recently emerged as an appealing alternative for legged locomotion over multiple terrains by training a policy in physical simulation and then transferring it to the real world (\ie sim-to-real transfer). Despite considerable progress, the capacity and scalability of traditional neural networks are still limited, which may hinder their applications in more complex environments. In contrast, the Transformer architecture has shown its superiority in a wide range of large-scale sequence modeling tasks, including natural language processing and decision-making problems. In this paper, we propose Terrain Transformer (TERT), a high-capacity Transformer model for quadrupedal locomotion control on various terrains. Furthermore, to better leverage Transformer in sim-to-real scenarios, we present a novel two-stage training framework consisting of an offline pretraining stage and an online correction stage, which can naturally integrate Transformer with privileged training. Extensive experiments in simulation demonstrate that TERT outperforms state-of-the-art baselines on different terrains in terms of return, energy consumption and control smoothness. In further real-world validation, TERT successfully traverses nine challenging terrains, including sand pit and stair down, which can not be accomplished by strong baselines.
           </p>
           <!-- <p>
             Our approach augments neural radiance fields
@@ -242,7 +245,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -250,7 +253,7 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
@@ -261,7 +264,7 @@
   <div class="container is-max-desktop">
     <div class = "container is-centered has-text-centered">
         <h2 class="title is-3">System Overview</h2>
-        <img src="./static/images/system_overview.jpeg" alt="System Overview" style="width: 100%; height: 150%;">
+        <img src="./static/images/Tert.png" alt="System Overview" style="width: 100%; height: 150%;">
     </div>
 
   </div>
